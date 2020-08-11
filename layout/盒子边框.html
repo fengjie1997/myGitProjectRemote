@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1{
+            width: 100px;
+            height: 100px;
+            /*
+                border-style 指定边框样式   
+                    solid 实线
+                    dotted 点状虚线
+                    dashed 虚线
+                    double 双线
+                    border-style 默认值none 没有边框
+            */
+            
+            border: solid 10px orange;
+            /*
+                内边距(padding)
+                    内容区和边框之间的距离
+                    四个方向:  
+                        padding-top
+                        ...
+                    内边距的设置会影响盒子大小
+                    背景颜色会延伸内边距
+            */
+            /*
+                一个盒子的可见框大小，由内容区 内边距以及边框共同决定
+            */
+            padding-top: 100px;
+            padding-right: 100px;
+            padding-bottom: 100px;
+            padding-left: 100px;
+            
+            /*
+                外边距(margin)
+                    - 外边距不会影响盒子可见框大小
+                    - 影响盒子位置
+                    - 四个方向：
+                        margin-top ：上外边距，设置正值，元素向下移动
+                        ...
+                        margin-right ：默认情况无作用  
+                    - 元素在页面是按照自左向右的顺序排列
+                        所以默认情况，margin-left与margin-top才移动自身
+                        bottom right移动其他元素
+
+            */
+            margin-top: 100px;
+            margin-bottom: 100px;
+
+        }
+        .box2{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+        .inner{
+            width: 100%;
+            height: 100%;
+            background-color: aqua;
+        }
+        .outer{
+            width: 800px;
+            height: 200px;
+            border: 10px green solid;
+        }
+        .inner{
+            width: 200px;
+            height: 200px;
+            background-color: grey;
+            /* margin-left: auto;
+            margin-right: auto; */
+            margin: 0 auto;
+            /*
+                元素水平方向的布局
+                    元素在其父元素中水平方向的位置由以下属性决定：
+                        margin-left
+                        border-left
+                        padding-left
+                        width
+                        margin-right
+                        border-right
+                        padding-right
+                    一个元素在其父元素水平居中的条件：
+                        以上七个属性值相加 = 父元素宽度
+                        上述等式不成立，即过渡约束，等式将自动调整
+                        width、margin-left、margin-right可设置auto
+                        如果某个值为auto，则真的调整auto的值属性
+
+            */
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">
+        <!-- <div class="inner"> -->
+
+        </div>
+    </div>
+    <div class="box2"></div>
+    <div class="outer">
+        <div class="inner">
+
+        </div>
+    </div>
+
+</body> 
+</html>

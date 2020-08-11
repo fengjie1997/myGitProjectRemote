@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.w,
+.top-bar {
+  width: 17.325rem;
+  margin: 0 auto;
+}
+html {
+  font-size: 5.33333333vw;
+  background-color: #eff0f4;
+}
+a {
+  text-decoration: none;
+}
+.top-bar {
+  display: flex;
+  height: 4.375rem;
+  width: 17.325rem;
+  justify-content: space-between;
+  align-items: center;
+}
+.top-bar a {
+  color: #000;
+  font-size: 36px;
+}
+.top-bar a i {
+  color: 999;
+  font-size: 18px;
+}

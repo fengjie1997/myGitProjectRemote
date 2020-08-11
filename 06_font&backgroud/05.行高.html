@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            font-size: 50px;
+            /* 
+                行高(line height)
+                    - 行高指的是文字实际占有度
+                    - 通过line-height来设置行高
+                        - 直接指定大小(px em)
+                        - 设置整数为当前font-size倍数（默认1.33）
+                
+                字体框
+                    - 字体框就是字体存在的格子，设置font-size实际上就是字体框高度
+                
+                行高会在字体框上下平均分配
+
+            */
+            line-height: 200px;
+            border: 1px red solid;
+            /* 
+                将行高设置为高度一致，单行文字在元素居中
+            */
+        }
+    </style>
+</head>
+<body>
+    <div>天气</div>
+</body>
+</html> 

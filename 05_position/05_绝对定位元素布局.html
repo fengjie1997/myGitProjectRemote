@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1{
+            width: 500px;
+            height: 500px;
+            background-color: #bfa;
+            position: relative;
+
+        }
+        .box2{
+            width: 100px;
+            height: 100px;
+            background-color: orange;
+            position: absolute;
+            margin-left: auto;
+            margin-right: auto;
+            right: 0;
+            left: 0;
+            margin-top: auto;
+            margin-bottom: auto;
+            top: 0;
+            bottom: 0;
+        }
+        /* 
+            水平布局
+                margin-left + border-left -padding-left + width + margin-right + border_right + padding_right = 宽度
+
+            
+            - 绝对定位开启后
+                水平布局等式添加left与right
+                过度约束: 调整right使等式满足，如果有auto，则优先调整auto,而right 与 left最优先
+            
+            垂直方向布局
+                top + margin-top/bottom + padding-top/bottom + border-top/bottom + height = 包含块高度
+        */
+    </style>
+</head>
+<body>
+    <div class="box1">
+        <div class="box2"></div>
+    </div>
+</body>
+</html>

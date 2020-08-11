@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    html{
+        /* css支持变量设置 */
+        --color: #bfa;
+    }
+    .box1{
+        width: calc(1000px/2);
+        height: 100px;
+        background-color: var(--color);
+    }
+    .box2{
+        width: 100px;
+        height: 100px;
+        color: #bfa;
+    }
+    .box3{
+        width: 100px;
+        height: 100px;
+        border: 10px solid #bfa;
+    }
+</style>
+<body>
+    <!-- less是css预处理语音
+            - less 减少代码量    
+    -->
+    <div class="box1"></div>
+    <div class="box2">aa</div>
+    <div class="box3"></div>
+</body>
+</html>

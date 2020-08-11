@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-size: 60px;
+        }
+        .box1{
+            width: 200px;
+            height: 200px;
+            background-color: #bfa;
+        }
+        .box2{
+            width: 200px;
+            height: 200px;
+            background-color: orange;
+            /* margin-left: 200px;
+            margin-top: -200px; */
+            /* 
+                    - 绝对定位
+                        - position：absolute
+                        - 特点：
+                            开启绝对定位，不设置偏移，不发生变化
+                            元素从文档流脱离
+                            会改变元素性质，行内变成块，块的高度被内容撑开
+                            提升元素层级
+                            相当于其包含块进行定位
+
+                                包含块( containing block )
+                                    - 正常情况下，离当前元素最近的祖先块元素11
+                                    - 绝对定位下的包含块
+                                        离当前元素的最近的，开启了定位的祖先远程
+                                        若无元素开启定位，则为根元素
+                                    - html(根元素 包含块)
+                        - 偏移量（offset）   
+                            通过偏移量设置元素位置
+                            top
+                                - 定位元素和定位位置上边的距离
+                            bottom
+                            left
+                            right 
+            
+             */
+             position: absolute;
+             /*  bottom: 100px; */
+             /* top: 100px; */
+             /* left: 200px;
+             top: -200px; */
+        }
+        .box3{
+            width: 200px;
+            height: 200px;
+            background-color:yellow;
+        }
+        .box4{
+            width: 400px;
+            height: 400px;
+            background-color: tomato;
+        }
+        .box5{
+            width: 300px;
+            height: 300px;
+            background-color: aliceblue;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">1</div>
+    <div class="box4">4
+        <div class="box5">5
+            <div class="box2">2</div>
+        </div>
+    </div>
+    <!-- <div class="box2">2</div> -->
+    <div class="box3">3</div>
+</body>
+</html>

@@ -1,0 +1,21 @@
+.clearfix::before,
+.clearfix::after{
+    content: '';
+    display: table;
+    clear: both;
+}
+body{
+    font: 14px/1.5;
+    color: #333;
+    min-width: 1226px;
+}
+a{
+    text-decoration: none;
+    color: #333;
+}
+.w{
+    /* 固定容器宽度 */
+    width: 1226px;
+    /* 设置容器居中 */
+    margin: 0 auto;
+}

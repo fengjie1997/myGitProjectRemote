@@ -1,0 +1,37 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+@total-width: 750;
+@center-width: 693/40rem;
+.w{
+    width: 693/40rem;
+    margin: 0 auto;
+}
+// 设置根元素
+html{
+    font-size: 100vw/@total-width * 40;
+    background-color: #eff0f4;
+}
+a{
+    text-decoration: none;
+}
+// 设置头部
+.top-bar:extend(.w){
+    display: flex;
+    // 高宽度
+    height: 175/40rem;
+    width: 693/40rem;
+    // 设置对齐方式
+    justify-content: space-between;
+    // 设置辅轴对齐方式
+    align-items: center;
+    a{
+        color: #000;
+        font-size: 36px;
+        i{
+            color: 999;
+            font-size: 18px;
+        }
+    }
+}

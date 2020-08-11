@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    html{
+        perspective: 800px;
+    }
+    .cube{
+        width: 200px;
+        height: 200px;
+        background-color: #bfa;
+        margin: 100px auto;
+        /* 设置3d变形效果 */
+        transform-style: preserve-3d;
+        /* transform: rotateX(45deg) rotateZ(45deg); */
+        animation: rotate 10s infinite linear;
+        /* transform: scaleZ(2) rotateY(45deg); */
+    }
+    .cube > div{
+        width: 200px;
+        height: 200px;
+        /* 为元素设置透明效果 */
+        opacity: 0.7;
+        position: absolute;
+    }
+    img{
+        vertical-align: top;
+    }
+    .box1{
+        transform: rotateY(90deg) translateZ(100px);
+    }
+    .box2{
+        transform: rotateY(-90deg) translateZ(100px);
+    }
+    .box3{
+        transform: rotateX(90deg) translateZ(100px);
+    }
+    .box4{
+        transform: rotateX(-90deg) translateZ(100px);
+    }
+    .box5{
+        transform: rotateY(180deg) translateZ(100px);
+    }
+    .box6{
+        transform: rotateY(0deg) translateZ(100px);
+    }
+    @keyframes rotate {
+        from{
+            transform: rotateY(0) rotateZ(0)
+        }
+        to {
+            transform:rotateX(1turn) rotateZ(90deg)
+        }
+    }
+</style>
+<body>
+    <!-- 创建外部容器 -->
+    <div class="cube">
+        <div class="box1">
+            <img src="./image/14/1.jpg">
+        </div>
+        <div class="box2">
+            <img src="./image/14/2.jpg">
+        </div>
+        <div class="box3">
+            <img src="./image/14/3.jpg">
+        </div>
+        <div class="box4">
+            <img src="./image/14/4.jpg">
+        </div>
+        <div class="box5">
+            <img src="./image/14/5.jpg">
+        </div>
+        <div class="box6">
+            <img src="./image/14/6.jpg">
+        </div>
+    </div>
+</body>
+</html>

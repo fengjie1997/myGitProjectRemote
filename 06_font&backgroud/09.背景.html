@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1{
+            width: 500px;
+            height: 500px;
+            padding: 10px;
+            overflow: auto;
+            /*
+                backgroud-color 背景图 
+             */
+            background-color: #bfa;
+            background-image: url("./img/1.jpg");
+            /* 
+                background-repeat 用来设置背景的重复方式
+                可选值：
+                    repeat 默认值，背景沿着 x y轴双方向重复
+                    repeat-x 沿着x轴重复
+                    repeat-y 沿着y轴重复
+                    no-repeat
+                用来设置背景的重复方式 */
+            background-repeat: no-repeat;
+            
+            /*
+                backgroud-position 用来设置图片背景的位置
+                    设置方式
+                        通过 top left right bottom center 来设置方向 
+                        必须写两个，只写一个，第二个默认center
+                    通过偏移量来指定背景图片的位置
+                        水平方向的偏移量
+                        垂直方向偏移量
+
+             */
+            /* background-position: 100px 100px; */
+            /* 设置背景范围
+                    background-clip
+                        可选值
+                            border-box 默认值,背景会出现在边框下边
+                            padding-box 背景不会出现边框,只会出现在内容区和内边距
+                            content-box 背景只会出现在内容区
+                    background-origin
+                        背景图片的偏移量计算的原点
+                            padding-box 默认值,background=position从内边距开始计算
+                            content-box 背景图片的偏移量从内容区开始计算
+        
+                 */
+            border: 10px red double;
+
+            /* background-origin: border-box;
+            background-clip: content-box; */
+
+            /* background-size 设置背景图片的大小
+                    第一个值表示宽度
+                    第二个值表示高度
+                    cover 图片比例不变元素铺满
+                    contain 图片比例不变，图片在元素完整显示
+             */
+        }
+        .box2{
+            width: 300px;
+            height: 1000px;
+            background-image: url('./img/2.jpg');
+            /*
+                background-attachment
+                    背景图片是否跟随元素移动
+                    可选值
+                        scroll 默认值跟随移动
+                        fixed 固定页面不移动
+
+             */
+
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">
+        <div class="box2"></div>
+    </div>
+</body>
+</html>

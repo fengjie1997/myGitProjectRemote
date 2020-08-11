@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    ul{
+        width: 800px;
+        height: 800px;
+        border: 10px red solid;
+        display: flex;
+        /* 
+            flex-wrap
+                设置弹性元素在容器是否换行
+                可选值
+                    nowrap 默认值，不换行
+                    wrap 沿着辅轴换行
+                    wrap-reverse 沿着辅轴反方向
+         */
+
+             /* 
+        flex-direction 指定容器弹性元素排列方式
+            可选值  
+                row 默认值.弹性元素在容器的水平排列(左向右)
+                        - 主轴 自左向右
+                row-reverse 弹性元素在容器反向水平排列(右向左)
+                        - 主轴 自右向左
+                column 弹性元素纵向排列(自上而下)
+     */
+     /* 
+        flex-flow wrap和direction的简写
+      */
+
+      justify-content: flex-start;
+      /*
+        justify-content
+            - 如何分配主轴上的空白空间(主轴元素的排列方式)
+                -可选值 
+                    flex-start 元素沿着主轴起边排列
+                    flex-end
+                    center 居中
+                    space-around 空白分配元素两侧
+                    space-evenly 空白分配元素单侧
+                    space-between 空白分布到元素间
+       */
+
+       /* 
+            align-items:
+                - 元素在辅轴上如何对齐
+                - 元素间的关系
+                    - 可选值
+                        stretch 默认值 元素长度相同值 元素拉伸
+                        flex-start 元素不拉伸，沿着辅轴起边对齐
+                        center 居中
+                        baseline 基线对齐
+
+            align-content 辅轴空白空间分布
+
+        */
+
+        /*
+            元素基础长度，主轴上的基础长度
+            flex-basic: 100px； 
+         */
+         /* 
+            flex简写三个属性 增长 缩减 基础
+          */
+    }
+     li{
+         width: 200px;
+         /* height: 100px; */
+         background-color: #bfa;
+         font-size: 50px;
+         text-align: center;
+         line-height: 100px;
+         flex-shrink: 0;
+        
+     }
+     /* 
+        flex-grow 伸展元素的系数
+            父元素有多余空间，子元素伸展
+        flex-shrink 收缩系数    
+            等比例分配
+     */
+     li:nth-child(1){
+         /* align-self 覆盖当前弹性元素上的align-items */
+         flex-grow: 1;
+     }
+     li:nth-child(2){
+         /* order 弹性元素的排列属性 */
+         background-color: pink;
+         flex-grow: 2;
+     }
+     li:nth-child(3){
+         background-color: green;
+         flex-shrink: 1;
+     }
+</style>
+<body>
+    <ul>
+        <li>1</li>
+        <li>2
+            <div>2</div>
+        </li>
+        <li>3
+            <div>3</div>
+            <div>3</div>
+        </li>
+    </ul>
+</body>
+</html>
